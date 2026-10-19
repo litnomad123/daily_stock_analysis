@@ -3636,7 +3636,7 @@ Output strictly in the following JSON format. This is a complete Decision Dashbo
         max_tokens = (
             generation_config.get('max_output_tokens')
             or generation_config.get('max_tokens')
-            or 8192
+            or 16384
         )
         requested_temperature = generation_config.get('temperature', 0.7)
         requested_timeout = generation_config.get("timeout")
@@ -4176,7 +4176,7 @@ Output strictly in the following JSON format. This is a complete Decision Dashbo
             # 设置生成配置
             generation_config = {
                 "temperature": config.llm_temperature,
-                "max_output_tokens": 8192,
+                "max_output_tokens": 16384,
             }
 
             logger.info(f"[LLM调用] 开始调用 {model_name}...")
